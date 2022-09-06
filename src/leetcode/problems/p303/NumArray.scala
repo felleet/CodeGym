@@ -2,8 +2,10 @@ package leetcode.problems.p303
 
 class NumArray(_nums: Array[Int]) {
 
+  val preSum = _nums.scanLeft(0)(_ + _)
+
   def sumRange(left: Int, right: Int): Int = {
-    (left to right).map(_nums(_)).sum
+    preSum(right + 1) - preSum(left)
   }
 
 }
