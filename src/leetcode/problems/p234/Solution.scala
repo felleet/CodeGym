@@ -17,7 +17,6 @@ object Solution {
     for (i <- arr.indices) {
       val lower = arr(i)
       val higher = arr(j)
-      println("lower=" + lower + ", higher=" + higher)
       if (lower != higher) {
         return false
       }
